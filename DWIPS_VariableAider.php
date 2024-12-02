@@ -40,7 +40,10 @@ namespace DWIPS\Aider {
             $this->MaintainVariable($Ident, $Name, $VarType, $Profile, DWIPS_VariableAider::$count, true);
             if($ActionEnabled){
                 $this->EnableAction($Ident);
+            }else{
+                $this->DisableAction($Ident);
             }
+            IPS_SetPosition(IPS_GetObjectIDByIdent ($Ident,  $this->InstanceID) , DWIPS_VariableAider::$count);
             DWIPS_VariableAider::$count++;
         }
 
