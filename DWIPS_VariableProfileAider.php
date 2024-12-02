@@ -89,9 +89,9 @@ namespace DWIPS\Aider {
                 $profile = IPS_GetVariableProfile($Name);
                 if ($profile['ProfileType'] != $VarType) {
                     throw new Exception('Variable profile type does not match the existing profile ' . $Name, E_USER_WARNING);
-                } else {
-                    IPS_CreateVariableProfile($Name, $VarType);
-                }
+                    }
+            }else {
+                IPS_CreateVariableProfile($Name, $VarType);
             }
             IPS_SetVariableProfileIcon($Name, $Icon);
             IPS_SetVariableProfileText($Name, $this->Translate($Prefix), $this->Translate($Suffix));
