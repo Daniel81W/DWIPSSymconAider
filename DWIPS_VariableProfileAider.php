@@ -18,9 +18,9 @@ namespace DWIPS\Aider {
         /**
          * Deletes a VariableProfile, if not used by other instances.
          *
-         * @param string $Name Name des zu löschenden Profils.
+         * @param string $Name Name of the VariableProfile to delete.
          */
-        protected function DeleteProfile(string $Name)
+        protected function DeleteVariableProfile(string $Name)
         {
             if (!IPS_VariableProfileExists($Name)) {
                 goto end;
