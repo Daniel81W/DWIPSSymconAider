@@ -36,9 +36,11 @@ namespace DWIPS\Aider {
          * * @param string $VarType Taype of the variable.
          * * @param string $Profile Profile of the variable.
          */
-        protected function CreateOrUpdateVariable($Ident, $Name, $VarType, $Profile){
-
+        protected function CreateOrUpdateVariable($Ident, $Name, $VarType, $Profile, $ActionEnabled = false){
             $this->MaintainVariable($Ident, $Name, $VarType, $Profile, DWIPS_VariableAider::$count, true);
+            if($ActionEnabled){
+                $this->EnableAction($Ident);
+            }
             DWIPS_VariableAider::$count++;
         }
 
